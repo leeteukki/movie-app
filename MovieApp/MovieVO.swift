@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class MovieVO {
   
@@ -23,6 +24,6 @@ class MovieVO {
     
     var rating      : Double?
     
-    
+    var thumbnailImage : UIImage?
     
 }

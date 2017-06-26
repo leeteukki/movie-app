@@ -72,6 +72,10 @@ class ListViewController: UITableViewController {
                 mvo.detail      = r["linkUrl"] as? String
                 mvo.rating      = ((r["ratingAverage"] as! NSString).doubleValue)
                 
+                let url: URL! = URL(string: mvo.thumbnail!)
+                let imageData = try! Data(contentsOf: url)
+                mvo.thumbnailImage = UIImage(data: imageData)
+                
                 
                 self.list.append(mvo)
             }
@@ -95,6 +99,8 @@ class ListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = self.list[indexPath.row]
         
+        NSLog("호출된 행번호 : \(indexPath.row), 제목 : \(row.title!)")
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! MovieCell
         
         cell.title?.text = row.title
@@ -102,11 +108,17 @@ class ListViewController: UITableViewController {
         cell.opendate?.text = row.openrate
         cell.rating?.text = "\(row.rating!)"
       
-        let url: URL! = URL(string: row.thumbnail!)
+       // let url: URL! = URL(string: row.thumbnail!)
        
-        let imageData = try! Data(contentsOf: url)
+       // let imageData = try! Data(contentsOf: url)
        
-        cell.thumbnail.image = UIImage(data:imageData)
+       // cell.thumbnail.image = UIImage(data:imageData)
+        
+       // cell.thumbnail.image = row.thumbnailImage
+        DispatchQueue.main.async(execute: {
+            NSLog("비동기 방식으로 실행되는 부분입니다")
+            cell.thumbnail.image = self.getThumbnailImage(indexPath.row)
+        })
         
         return cell
     }
@@ -114,4 +126,38 @@ class ListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         NSLog("선택된 행은 \(indexPath.row) 번째 행입니다")
     }
+    
+    func getThumbnailImage(_ index : Int) -> UIImage {
+        let mvo = self.list[index]
+        
+        if let savedImage = mvo.thumbnailImage {
+            return savedImage
+        } else {
+            let url: URL! = URL(string: mvo.thumbnail!)
+            let imageData = try! Data(contentsOf: url)
+            mvo.thumbnailImage = UIImage(data: imageData)
+            
+            return mvo.thumbnailImage!
+            
+            
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segue_detail"{
+            
+            let cell = sender as! MovieCell
+            
+            let path = self.tableView.indexPath(for: cell)
+            
+            let movieinfo = self.list[path!.row]
+            
+            let detailVC  = segue.destination as? DetailViewController
+            
+            detailVC?.mvo = movieinfo
+            
+    }
+}
 }

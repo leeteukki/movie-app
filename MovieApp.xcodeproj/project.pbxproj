@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0602B7171F00FC6100257383 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0602B7161F00FC6100257383 /* DetailViewController.swift */; };
 		068197EB1EF65FBD0078C23C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068197EA1EF65FBD0078C23C /* AppDelegate.swift */; };
 		068197ED1EF65FBD0078C23C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068197EC1EF65FBD0078C23C /* ViewController.swift */; };
 		068197F01EF65FBD0078C23C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068197EE1EF65FBD0078C23C /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0602B7161F00FC6100257383 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		068197E71EF65FBD0078C23C /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		068197EA1EF65FBD0078C23C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		068197EC1EF65FBD0078C23C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				0681981C1EF678B30078C23C /* MovieCell.swift */,
 				0681981A1EF661680078C23C /* MovieVO.swift */,
 				068198181EF660D10078C23C /* ListViewController.swift */,
+				0602B7161F00FC6100257383 /* DetailViewController.swift */,
 				068197F11EF65FBD0078C23C /* Assets.xcassets */,
 				068197F31EF65FBD0078C23C /* LaunchScreen.storyboard */,
 				068197F61EF65FBD0078C23C /* Info.plist */,
@@ -280,6 +283,7 @@
 				068197ED1EF65FBD0078C23C /* ViewController.swift in Sources */,
 				0681981B1EF661680078C23C /* MovieVO.swift in Sources */,
 				068197EB1EF65FBD0078C23C /* AppDelegate.swift in Sources */,
+				0602B7171F00FC6100257383 /* DetailViewController.swift in Sources */,
 				0681981D1EF678B30078C23C /* MovieCell.swift in Sources */,
 				068198191EF660D10078C23C /* ListViewController.swift in Sources */,
 			);
