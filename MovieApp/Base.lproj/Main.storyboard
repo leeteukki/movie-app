@@ -25,6 +25,9 @@
                                     <rect key="frame" x="164" y="7" width="46" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="more:" destination="Xy1-lX-0rH" eventType="touchUpInside" id="UMM-NG-6Bv"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -86,6 +89,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="영 화 정보" id="9eo-HC-hco"/>
+                    <connections>
+                        <outlet property="moreBtn" destination="Xad-7p-rEH" id="CcM-0j-3Lf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LI4-tR-J7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
