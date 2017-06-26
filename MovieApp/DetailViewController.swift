@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var wv: UIWebView!
     
@@ -41,6 +41,29 @@ class DetailViewController: UIViewController {
                 
             }
         }
+    }
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        
+        self.spinner.stopAnimating()
+        
+        let alert = UIAlertController(title: "오류", message: "상세페이지를 읽어노는데 실패하였습니다", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "확인", style: .cancel) {
+         (_)in
+            _ = self.navigationController?.popViewController(animated: true)
+        }
+        
+        alert.addAction(cancelAction)
+        self.present(alert, animated: false, completion: nil)
         
     }
+    
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        self.spinner.startAnimating()
+    }
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        self.spinner.stopAnimating()
+    }
 }
+
+
