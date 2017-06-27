@@ -43,7 +43,7 @@ class TheaterListController: UITableViewController {
             } catch {
                 
                 let alert = UIAlertController(title: "실패", message: "데이터 분석이 실패 했습니다", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "확인", style: "데이터 분석이 성공 했습니다", handler: .cancel))
+                alert.addAction(UIAlertAction(title: "확인", style: .cancel))
                 self.present(alert, animated: false)
                 
             }
