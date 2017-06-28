@@ -17,7 +17,8 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
-        NSLog("linkurl = \(self.mvo?.detail), title= \(self.mvo?.title)")
+        
+        NSLog("linkurl = \(String(describing: self.mvo?.detail)), title= \(String(describing: self.mvo?.title))")
         
         let navibar = self.navigationItem
         navibar.title = self.mvo?.title

@@ -22,8 +22,9 @@ class TheaterListController: UITableViewController {
     
     func callTheaterAPI() {
      
-        let requestURI = "http://swiftapi.rubypaper.co.kr:2029/theater/list"
-        let sList = "json"
+        let requestURI = "http://115.68.183.178:2029/theater/list"
+        let sList = 10
+        let type = "json"
         
         let urlObj = URL(string: "\(requestURI)?s_page=\(self.startPoint)&s_list=\(sList)&type=\(type)")
         
@@ -58,5 +59,24 @@ class TheaterListController: UITableViewController {
             self.present(alert, animated: false)
             
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.list.count
+    }
+ 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+            let obj = self.list[indexPath.row]
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "tCell") as! TheaterCell
+            
+            cell.name?.text = obj["상영관명"] as? String
+            cell.tel?.text = obj["연락처"] as? String
+            cell.addr?.text = obj["소재지도로명주소"] as? String
+            
+            return cell
+    
     }
 }

@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="1312.8" y="80.50974512743629"/>
         </scene>
-        <!--Root View Controller-->
+        <!--영화관 정보-->
         <scene sceneID="rLg-xv-BGe">
             <objects>
                 <tableViewController id="ZBX-KF-pOS" customClass="TheaterListController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,11 +149,11 @@
                             <outlet property="delegate" destination="ZBX-KF-pOS" id="dEp-zW-Ej6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="wSM-OM-Hjk"/>
+                    <navigationItem key="navigationItem" title="영화관 정보" id="wSM-OM-Hjk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjp-91-deO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312.8" y="843.32833583208401"/>
+            <point key="canvasLocation" x="1313" y="939"/>
         </scene>
         <!--영화관-->
         <scene sceneID="pio-x6-yGQ">
@@ -170,7 +170,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtc-dZ-UBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="845"/>
+            <point key="canvasLocation" x="148" y="939"/>
         </scene>
         <!--Title-->
         <scene sceneID="q5E-Uj-zar">
