@@ -12,6 +12,8 @@
 		0602B71B1F0112C100257383 /* Trailer.png in Resources */ = {isa = PBXBuildFile; fileRef = 0602B7191F0112C100257383 /* Trailer.png */; };
 		0602B71D1F0259E800257383 /* TheaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0602B71C1F0259E800257383 /* TheaterCell.swift */; };
 		0602B71F1F025BC500257383 /* TheaterListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0602B71E1F025BC500257383 /* TheaterListController.swift */; };
+		0602B7221F03B9BF00257383 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0602B7211F03B9BF00257383 /* MapKit.framework */; };
+		0602B7241F03BC4000257383 /* TheaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0602B7231F03BC4000257383 /* TheaterViewController.swift */; };
 		068197EB1EF65FBD0078C23C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068197EA1EF65FBD0078C23C /* AppDelegate.swift */; };
 		068197ED1EF65FBD0078C23C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068197EC1EF65FBD0078C23C /* ViewController.swift */; };
 		068197F01EF65FBD0078C23C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068197EE1EF65FBD0078C23C /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 		0602B7191F0112C100257383 /* Trailer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Trailer.png; path = "../../swift03-basic-master/TabIcon/Trailer.png"; sourceTree = "<group>"; };
 		0602B71C1F0259E800257383 /* TheaterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheaterCell.swift; sourceTree = "<group>"; };
 		0602B71E1F025BC500257383 /* TheaterListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheaterListController.swift; sourceTree = "<group>"; };
+		0602B7211F03B9BF00257383 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0602B7231F03BC4000257383 /* TheaterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TheaterViewController.swift; path = ../TheaterViewController.swift; sourceTree = "<group>"; };
 		068197E71EF65FBD0078C23C /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		068197EA1EF65FBD0078C23C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		068197EC1EF65FBD0078C23C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0602B7221F03B9BF00257383 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0602B7201F03B9BF00257383 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0602B7211F03B9BF00257383 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		068197DE1EF65FBD0078C23C = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +110,7 @@
 				068197FE1EF65FBD0078C23C /* MovieAppTests */,
 				068198091EF65FBD0078C23C /* MovieAppUITests */,
 				068197E81EF65FBD0078C23C /* Products */,
+				0602B7201F03B9BF00257383 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +139,7 @@
 				0602B7161F00FC6100257383 /* DetailViewController.swift */,
 				0602B71C1F0259E800257383 /* TheaterCell.swift */,
 				0602B71E1F025BC500257383 /* TheaterListController.swift */,
+				0602B7231F03BC4000257383 /* TheaterViewController.swift */,
 				068197F11EF65FBD0078C23C /* Assets.xcassets */,
 				068197F31EF65FBD0078C23C /* LaunchScreen.storyboard */,
 				068197F61EF65FBD0078C23C /* Info.plist */,
@@ -227,6 +242,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 4E643Y244C;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					068197FA1EF65FBD0078C23C = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -300,6 +320,7 @@
 				0602B71F1F025BC500257383 /* TheaterListController.swift in Sources */,
 				068197EB1EF65FBD0078C23C /* AppDelegate.swift in Sources */,
 				0602B7171F00FC6100257383 /* DetailViewController.swift in Sources */,
+				0602B7241F03BC4000257383 /* TheaterViewController.swift in Sources */,
 				0681981D1EF678B30078C23C /* MovieCell.swift in Sources */,
 				068198191EF660D10078C23C /* ListViewController.swift in Sources */,
 			);

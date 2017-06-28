@@ -115,21 +115,21 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상영관명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cb5-0a-DfW">
-                                            <rect key="frame" x="14" y="0.0" width="59" height="21"/>
+                                            <rect key="frame" x="14" y="0.0" width="194" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAr-GB-3py">
-                                            <rect key="frame" x="14" y="22" width="30" height="21"/>
+                                            <rect key="frame" x="14" y="22" width="320" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="연락처" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9a-LF-9dV">
-                                            <rect key="frame" x="289" y="0.0" width="45" height="21"/>
+                                            <rect key="frame" x="208" y="0.0" width="126" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
@@ -141,6 +141,7 @@
                                     <outlet property="addr" destination="BAr-GB-3py" id="QmI-C1-FW8"/>
                                     <outlet property="name" destination="Cb5-0a-DfW" id="9qi-eV-WhO"/>
                                     <outlet property="tel" destination="W9a-LF-9dV" id="n6G-8f-oMK"/>
+                                    <segue destination="Zhp-Gb-Unz" kind="show" identifier="segue_map" id="jjn-uO-xgg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -153,7 +154,35 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjp-91-deO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1313" y="939"/>
+            <point key="canvasLocation" x="1312.8" y="938.68065967016503"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="htX-eO-6jG">
+            <objects>
+                <viewController id="Zhp-Gb-Unz" customClass="TheaterViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X1y-tQ-5MJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="hU2-VC-UyI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Smu-sf-nOq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="blB-CR-wIk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="pfC-YK-lHI"/>
+                    <connections>
+                        <outlet property="map" destination="blB-CR-wIk" id="Not-n0-h0H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VnU-x2-PH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2252" y="938.68065967016503"/>
         </scene>
         <!--영화관-->
         <scene sceneID="pio-x6-yGQ">
